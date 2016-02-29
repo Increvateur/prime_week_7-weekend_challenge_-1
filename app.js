@@ -35,14 +35,14 @@ var employeeArray = [];
 function salaryCalc(){
   var finalSalary = 0
   for (var i = 0; i < employeeArray.length; i++){
-    var employee = employeeArray[i];
-    finalSalary += parseInt(employee.salary) / 12;
+    var employees = employeeArray[i];
+    finalSalary += parseInt(employees.salary) / 12;
   };
 
-  displayInfo();
+  displayInfo(employees);
 
   // This displays the employee information that was entered.
-  function displayInfo(){
+  function displayInfo(employee){
     $(".output-area").append('<div class="employee"></div>');
     var $el = $(".output-area").children().last();
 
